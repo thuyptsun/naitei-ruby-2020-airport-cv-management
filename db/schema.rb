@@ -131,10 +131,9 @@ ActiveRecord::Schema.define(version: 2020_08_18_020652) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
-    t.bigint "role_id", null: false
+    t.integer "role_id", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["role_id"], name: "index_users_on_role_id"
   end
 
   add_foreign_key "educations", "users"
@@ -151,5 +150,4 @@ ActiveRecord::Schema.define(version: 2020_08_18_020652) do
   add_foreign_key "notifications", "users", column: "sender_id"
   add_foreign_key "profiles", "genders"
   add_foreign_key "profiles", "users"
-  add_foreign_key "users", "roles"
 end

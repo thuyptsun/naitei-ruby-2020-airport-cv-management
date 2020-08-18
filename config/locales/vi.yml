@@ -45,6 +45,12 @@ vi:
       featured_jobs: "Nổi bật"
       part_time: "Bán thời gian"
       full_time: "Toàn thời gian"
+    error_messages:
+      success: "Chào mừng đến với Job Board!"
+      danger: "Đăng kí tài khoản bị lỗi"
+      user_not_found: "Không tìm thấy người dùng"
+      the_form_contains: "Biểu mẫu chứa "
+      error: "lỗi"
   static_pages:
     home:
       title: "Trang chủ"
@@ -57,3 +63,18 @@ vi:
           answer: "Bạn đang ở trang tuyển dụng của Tokyo Airport."
         - question: "Tôi phải gửi CV tới ai?"
           answer: "Hãy tạo CV ngay trên trang web này và gửi yêu cầu đến chúng tôi."
+  users:
+    new:
+      signup: "Đăng kí"
+      content: "Đây sẽ là trang đăng kí cho người dùng mới."
+      firstname: "Họ"
+      lastname: "Tên"
+      email: "Email"
+      password: "Mật khẩu"
+      password_confirmation: "Xác nhận mật khẩu"
+      create: "Tạo tài khoản"
+      register: "Đăng kí"
+      i_accept: "Tôi đồng ý các điều khoản"
+      already_have_an_account: "Đã có tài khoản?"
+      sign_in: "Đăng nhập"
+      or_signup_with: "Hoặc đăng kí với"

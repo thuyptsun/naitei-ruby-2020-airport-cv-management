@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
     create_table :users do |t|
       t.string :email
       t.string :password_digest
-      t.references :role, null: false, foreign_key: true
+      t.integer :role_id, default: 0
 
       t.timestamps
     end

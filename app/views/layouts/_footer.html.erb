@@ -1,76 +1,77 @@
-<!-- footer start -->
-<footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
-        <%= link_to Settings.empty_link do %>
-          <%= image_tag "logo_light.png", height: Settings.logo_medium %>
-        <% end %>
-        <p class="mt-4">
-          <%= t ".slogan" %>
-        </p>
-        <ul class="social-icon social list-inline mb-0">
-          <li class="list-inline-item">
-            <%= link_to Settings.empty_path, class: "rounded" do %>
-              <i class="fab fa-facebook"></i>
-            <% end %>
-          </li>
-          <li class="list-inline-item">
-            <%= link_to Settings.empty_path, class: "rounded" do %>
-              <i class="fab fa-twitter"></i>
-            <% end %>
-          </li>
-          <li class="list-inline-item">
-            <%= link_to Settings.empty_path, class: "rounded" do %>
-              <i class="fab fa-instagram"></i>
-            <% end %>
-          </li>
-          <li class="list-inline-item">
-            <%= link_to Settings.empty_path, class: "rounded" do %>
-              <i class="fab fa-google"></i>
-            <% end %>
-          </li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-4 col-12 mt-4 pt-2">
-        <p class="text-white mb-4 footer-list-title">
-          <%= t ".company" %>
-        </p>
-        <ul class="list-unstyled footer-list">
-          <li>
-            <%= link_to t(".about_us"), about_path, class: "text-foot" %>
-          </li>
-          <li>
-            <%= link_to t(".contact"), contact_path, class: "text-foot" %>
-          </li>
-          <li>
-            <%= link_to t(".faq"), help_path, class: "text-foot" %>
-          </li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-4 col-12 mt-4 pt-2">
-        <p class="text-white mb-4 footer-list-title">
-          <%= t ".language" %>
-        </p>
-        <ul class="list-unstyled footer-list">
-          <li>
-            <%= link_to t(".vi"), {locale: :vi}, class: "text-foot" %>
-          </li>
-          <li>
-            <%= link_to t(".en"), {locale: :en}, class: "text-foot" %>
-          </li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-4 col-12 mt-4 pt-2">
-        <p class="text-white mb-4 footer-list-title f-17">
-          <%= t ".business_hours" %>
-        </p>
-        <ul class="list-unstyled text-foot mt-4 mb-0">
-          <% t(".business_hours_content").each do |content| %>
-            <li class="mb-2" > <%= content %> </li>
+<% if current_page? controller: :users, action: :new %>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+          <%= link_to Settings.empty_link do %>
+            <%= image_tag "logo_light.png", height: Settings.logo_medium %>
           <% end %>
-        </ul>
+          <p class="mt-4">
+            <%= t ".slogan" %>
+          </p>
+          <ul class="social-icon social list-inline mb-0">
+            <li class="list-inline-item">
+              <%= link_to Settings.empty_path, class: "rounded" do %>
+                <i class="fab fa-facebook"></i>
+              <% end %>
+            </li>
+            <li class="list-inline-item">
+              <%= link_to Settings.empty_path, class: "rounded" do %>
+                <i class="fab fa-twitter"></i>
+              <% end %>
+            </li>
+            <li class="list-inline-item">
+              <%= link_to Settings.empty_path, class: "rounded" do %>
+                <i class="fab fa-instagram"></i>
+              <% end %>
+            </li>
+            <li class="list-inline-item">
+              <%= link_to Settings.empty_path, class: "rounded" do %>
+                <i class="fab fa-google"></i>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12 mt-4 pt-2">
+          <p class="text-white mb-4 footer-list-title">
+            <%= t ".company" %>
+          </p>
+          <ul class="list-unstyled footer-list">
+            <li>
+              <%= link_to t(".about_us"), about_path, class: "text-foot" %>
+            </li>
+            <li>
+              <%= link_to t(".contact"), contact_path, class: "text-foot" %>
+            </li>
+            <li>
+              <%= link_to t(".faq"), help_path, class: "text-foot" %>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12 mt-4 pt-2">
+          <p class="text-white mb-4 footer-list-title">
+            <%= t ".language" %>
+          </p>
+          <ul class="list-unstyled footer-list">
+            <li>
+              <%= link_to t(".vi"), {locale: :vi}, class: "text-foot" %>
+            </li>
+            <li>
+              <%= link_to t(".en"), {locale: :en}, class: "text-foot" %>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12 mt-4 pt-2">
+          <p class="text-white mb-4 footer-list-title f-17">
+            <%= t ".business_hours" %>
+          </p>
+          <ul class="list-unstyled text-foot mt-4 mb-0">
+            <% t(".business_hours_content").each do |content| %>
+              <li class="mb-2" > <%= content %> </li>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
+<% end %>
