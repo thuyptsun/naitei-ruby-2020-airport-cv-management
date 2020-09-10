@@ -104,6 +104,7 @@ en:
       job_application_not_found: "Job Application not found"
       job_post_not_found: "Job Post not found"
       profile_not_found: "Profile not found"
+    filetype: "Must be a PDF or a DOC file"
   static_pages:
     home:
       title: "Home"
@@ -204,8 +205,7 @@ en:
     unlocks:
       new:
         email: "Email"
-        resend: "Resend unlock instructions"
-    
+        resend: "Resend unlock instructions"  
   profiles:
     educations:
       educations: "Educations"
@@ -218,6 +218,7 @@ en:
       gender: "Gender"
       address: "Address"
       phone_number: "Phone Number"
+      file_uploaded: "File Uploaded"
     show:
       title: "Candidate Profile"
       user_not_found: "User not found"
@@ -244,6 +245,7 @@ en:
       introduction: "Introduction"
       save_changes: "Save changes"
       close: "Close"
+      cv_doc_pdf: "Upload file CV type DOC, PDF or Zip"
     education_modal:
       add: "Add"
       education: "Education"
@@ -369,6 +371,7 @@ en:
         salary: "Salary"
         category: "Category"
         date_posted: "Date Posted"
+        sure: "Are you sure?"
       create:
         success: "Posted a job post"
         error: "Post job post fail"

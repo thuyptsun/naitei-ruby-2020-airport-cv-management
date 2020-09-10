@@ -57,19 +57,19 @@ class Recruiters::JobPostsController < ApplicationController
   end
 
   def cancan_access_denied
-    flash[:error] = t "shared.you_are_not_allow_to_do_this_action"
+    flash[:error] = t "shared.error_messages.you_are_not_allow_to_do_this_action"
     redirect_to root_url
   end
 
   def active_record_record_not_found
-    flash[:warning] = t "shared.job_post_not_found"
+    flash[:warning] = t "shared.error_messages.job_post_not_found"
     redirect_to root_path
   end
 
   def must_be_a_recruiter
     return if current_user&.has_role? :recruiter
 
-    flash[:error] = t "shared.you_are_not_allow_to_do_this_action"
+    flash[:error] = t "shared.error_messages.you_are_not_allow_to_do_this_action"
     redirect_to root_path
   end
 end

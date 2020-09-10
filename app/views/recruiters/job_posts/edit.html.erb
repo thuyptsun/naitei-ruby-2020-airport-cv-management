@@ -6,7 +6,7 @@
         <div class="col-md-12">
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title"><%= t ".update_job_post" %></h3>
+              <h3 class="card-title"><%= t ".post_a_new_job" %></h3>
             </div>
             <%= form_for [:recruiters, @job_post] do |f| %>
               <form role="form">
@@ -23,6 +23,8 @@
                     <div class="invalid-feedback">
                       <%= f.object.errors.full_messages_for(:title).join("\n") %>
                     </div>
+                  </div>
+                  <div class="form-group">
                     <%= f.label :location do %>
                       <div class="text-dark">
                         <%= t ".location" %><span class="text-danger"> *</span>
@@ -34,30 +36,62 @@
                     <div class="invalid-feedback">
                       <%= f.object.errors.full_messages_for(:location).join("\n") %>
                     </div>
-                    <%= f.label :salary_from do %>
-                      <div class="text-dark">
-                        <%= t ".salary_from" %><span class="text-danger"> *</span>
-                      </div>
-                    <% end %>
-                    <%= f.number_field :salary_from,
+                  </div>
+                  <div class="block-inline">
+                    <div class="col-lg-6 float-left">
+                      <div class="form-group">
+                        <%= f.label :salary_from do %>
+                          <div class="text-dark">
+                            <%= t ".salary_from" %><span class="text-danger"> *</span>
+                          </div>
+                        <% end %>
+                        <%= f.number_field :salary_from,
                       min: Settings.validations.job_post.min,
                       max: Settings.validations.job_post.max,
                       class: "form-control", required: true %>
-                    <div class="invalid-feedback">
-                      <%= f.object.errors.full_messages_for(:salary_from).join("\n") %>
-                    </div>
-                    <%= f.label :salary_to do %>
-                      <div class="text-dark">
-                        <%= t ".salary_to" %><span class="text-danger"> *</span>
+                        <div class="invalid-feedback">
+                          <%= f.object.errors.full_messages_for(:salary_from).join("\n") %>
+                        </div>
                       </div>
-                    <% end %>
-                    <%= f.number_field :salary_to,
+                      <div class="form-group">
+                        <%= f.label :category_id do %>
+                          <div class="text-dark">
+                            <%= t ".category_id" %><span class="text-danger"> *</span>
+                          </div>
+                        <% end %>
+                        <div class="form-button">
+                          <%= f.select :category_id, Category.all.collect {|c| [ c.title, c.id ] }, {}, {class: "custom-select"} %>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 float-right">
+                      <div class="form-group">
+                        <%= f.label :salary_to do %>
+                          <div class="text-dark">
+                            <%= t ".salary_to" %><span class="text-danger"> *</span>
+                          </div>
+                        <% end %>
+                        <%= f.number_field :salary_to,
                       min: Settings.validations.job_post.min,
                       max: Settings.validations.job_post.max,
                       class: "form-control", required: true %>
-                    <div class="invalid-feedback">
-                      <%= f.object.errors.full_messages_for(:salary_to).join("\n") %>
+                        <div class="invalid-feedback">
+                          <%= f.object.errors.full_messages_for(:salary_to).join("\n") %>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <%= f.label :unit_id do %>
+                          <div class="text-dark">
+                            <%= t ".unit_id" %><span class="text-danger"> *</span>
+                          </div>
+                        <% end %>
+                        <div class="form-button">
+                          <%= f.select :unit_id, Unit.all.collect {|u| [ u.name, u.id ] }, {}, {class: "custom-select"} %>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                  <div class="form-group">
                     <%= f.label :description do %>
                       <div class="text-dark">
                         <%= t ".description" %><span class="text-danger"> *</span>
@@ -70,6 +104,8 @@
                     <div class="invalid-feedback">
                       <%= f.object.errors.full_messages_for(:description).join("\n") %>
                     </div>
+                  </div>
+                  <div class="form-group">
                     <%= f.label :requirement do %>
                       <div class="text-dark">
                         <%= t ".requirement" %><span class="text-danger"> *</span>
@@ -82,22 +118,8 @@
                     <div class="invalid-feedback">
                       <%= f.object.errors.full_messages_for(:requirement).join("\n") %>
                     </div>
-                    <%= f.label :category_id do %>
-                      <div class="text-dark">
-                        <%= t ".category_id" %><span class="text-danger"> *</span>
-                      </div>
-                    <% end %>
-                    <div class="form-button">
-                      <%= f.select :category_id, Category.all.collect {|c| [ c.title, c.id ] }, {}, {class: "custom-select"} %>
-                    </div>
-                    <%= f.label :unit_id do %>
-                      <div class="text-dark">
-                        <%= t ".unit_id" %><span class="text-danger"> *</span>
-                      </div>
-                    <% end %>
-                    <div class="form-button">
-                      <%= f.select :unit_id, Unit.all.collect {|u| [ u.name, u.id ] }, {}, {class: "custom-select"} %>
-                    </div>
+                  </div>
+                  <div class="form-group">
                     <%= f.label :note do %>
                       <div class="text-dark">
                         <%= t ".note" %>
@@ -106,14 +128,15 @@
                     <%= f.text_field :note, class: "form-control",
                       minlength: Settings.validations.job_post.content_min,
                       maxlength: Settings.validations.job_post.content_max %>
-                    <%= f.submit t(".submit"), class: "btn btn-primary"%>
                   </div>
+                  <%= f.submit t(".submit"), class: "btn btn-primary"%>
                 </div>
-              </form>
-            <% end %>
-          </div>
+              </div>
+            </form>
+          <% end %>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </div>

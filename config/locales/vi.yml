@@ -104,6 +104,7 @@ vi:
       job_application_not_found: "Không tìm thấy lịch sử ứng tuyển"
       job_post_not_found: "Không tìm thấy bài đăng tìm việc"
       profile_not_found: "Không tìm thấy hồ sơ"
+    filetype: "Phải đính kèm tệp định dạng DOC hoặc PDF"
   static_pages:
     home:
       title: "Trang chủ"
@@ -217,6 +218,7 @@ vi:
       gender: "Giới tính"
       address: "Địa chỉ"
       phone_number: "Số điện thoại"
+      file_uploaded: "Tệp đính kèm"
     show:
       title: "Hồ sơ ứng viên"
       user_not_found: "Không tìm thấy hồ sơ này"
@@ -228,8 +230,8 @@ vi:
       educations: "Học vấn"
       experiences: "Kinh nghiệm"
     update:
-      profile_updated: "Profile updated"
-      profile_update_failed: "Profile updated failed"
+      profile_updated: "Hồ sơ đã được cập nhật"
+      profile_update_failed: "Cập nhật hồ sơ lỗi"
     profile_modal:
       general_information: "Thông tin chung"
       edit_general_information: "Sửa thông tin chung"
@@ -243,6 +245,7 @@ vi:
       introduction: "Giới thiệu"
       save_changes: "Lưu"
       close: "Hủy"
+      cv_doc_pdf: "Đăng tệp CV có sẵn định dạng DOC, PDF hoặc Zip"
     education_modal:
       add: "Thêm"
       education: "Học vấn"
@@ -368,6 +371,7 @@ vi:
         salary: "Lương"
         category: "Danh mục"
         date_posted: "Ngày đăng"
+        sure: "Bạn có chắc muốn thay đổi?"
       create:
         success: "Đăng thành công bài tuyển người"
         error: "Đăng tuyển thất bại"
@@ -378,12 +382,6 @@ vi:
         success: "Xóa thành công"
         error: "Xóa thất bại"
     notifications:
-      notification:
-        had_cancelled: "đã hủy"
-        had_apply: "đã đăng ký"
-      index:
-        title: "Thông báo"
-  notifications:
       notification:
         had_cancelled: "đã hủy"
         had_apply: "đã đăng ký"

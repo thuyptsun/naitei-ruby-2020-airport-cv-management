@@ -60,7 +60,7 @@
               <%= link_to edit_recruiters_job_post_path(@job_post), class:"btn btn-info" do %>
                 <i class="fas fa-edit"></i>
               <% end %>
-              <%= link_to new_recruiters_job_post_path, class:"btn btn-danger" do %>
+              <%= link_to recruiters_job_post_path(@job_post), class:"btn btn-danger", data: { confirm: t(".sure")}, method: :delete do %>
                 <i class="fas fa-trash"></i>
               <% end %>
             </div>

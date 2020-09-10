@@ -41,7 +41,7 @@ end
 end
 
 15.times do |n|
-  Category.create! title: Faker::Job.field
+  Category.create! title: Faker::Job.unique.field
 end
 
 20.times do |n|
