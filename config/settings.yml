@@ -79,3 +79,5 @@ status:
   interviewing: "interviewing"
   accepted: "accepted"
   cancel: "cancelled"
+notifications:
+  per_page: 10

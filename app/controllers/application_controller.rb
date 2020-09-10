@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :set_locale
+  before_action :set_user_cookie
 
   private
 
@@ -13,6 +14,10 @@ class ApplicationController < ActionController::Base
 
   def default_url_options
     {locale: I18n.locale}
+  end
+
+  def set_user_cookie
+    cookies[:user_id] = current_user.id if current_user
   end
 
   protected

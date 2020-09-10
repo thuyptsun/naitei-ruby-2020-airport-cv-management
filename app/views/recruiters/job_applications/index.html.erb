@@ -14,21 +14,17 @@
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title"><%= t ".recent_job_applications" %></h3>
+            <% if @q.result %>
+              <div class="float-left"> <%= pluralize @q.result.size, t(".result") %></div>
+            <% end %>
             <div class="card-tools">
-              <div class="input-group input-group-sm">
-                <%= search_form_for [:recruiters,@q], class: "form-inline" do |f| %>
-                  <div class="row">
-                    <div class="input-group-append">
-                      <%= f.select :status_eq, JobApplication.statuses.to_a.map { |k, v| [k,v ]},
+              <%= search_form_for [:recruiters,@q], html: {class: "input-group input-group-sm"} do |f| %>
+                <div class="input-group-append">
+                  <%= f.select :status_eq, JobApplication.statuses.to_a.map { |k, v| [k,v ]},
                          {include_blank: t(".status")}, class: "form-control custom-select" %>
-                    </div>
-                    <div class="input-group-append">
-                      <%= f.submit t(".search"), class: "btn btn-primary" %>
-                    </div>
-                  </div>
-                <% end %>
-              </div>
+                  <%= f.submit t(".search"), class: "btn btn-default" %>
+                </div>
+              <% end %>
             </div>
           </div>
           <div class="card-body table-responsive p-0">

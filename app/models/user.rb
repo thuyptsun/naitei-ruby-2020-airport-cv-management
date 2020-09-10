@@ -11,6 +11,10 @@ class User < ApplicationRecord
            class_name: JobApplication.name
   has_one :profile, dependent: :destroy, autosave: true
   has_many :job_posts, dependent: :destroy
+  has_many :notifications, class_name: Notification.name,
+           foreign_key: :receiver_id, dependent: :destroy
+  has_many :send_notifications, class_name: Notification.name,
+           foreign_key: :sender_id, dependent: :destroy
 
   accepts_nested_attributes_for :profile
 

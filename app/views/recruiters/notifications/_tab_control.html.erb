@@ -1,0 +1,11 @@
+<div class="btn-group">
+  <% if params.has_key? :q %>
+    <% filter = "Apply" if params[:q][:message_eq].to_i == Notification.messages[:reviewing] %>
+    <% filter = "Cancelled" if params[:q][:message_eq].to_i == Notification.messages[:cancelled] %>
+  <% else %>
+    <% filter = "All" %>
+  <% end %>
+  <%= link_to "All", recruiters_notifications_path, class: "btn btn-#{filter == "All" ? "primary" : "default"} btn-sm" %>
+  <%= link_to "Apply", recruiters_notifications_path({"q[message_eq]": Notification.messages[:reviewing]}), class: "btn btn-#{filter == "Apply" ? "primary" : "default"} btn-sm" %>
+  <%= link_to "Cancelled", recruiters_notifications_path({"q[message_eq]": Notification.messages[:cancelled]}), class: "btn btn-#{filter == "Cancelled" ? "primary" : "default"} btn-sm" %>
+</div>

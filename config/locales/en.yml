@@ -49,69 +49,6 @@ en:
       category: "Category"
       date_posted: "Date Posted"
       apply: "Apply this job"
-  recruiters:
-    job_posts:
-      job_post:
-        sure: "Are you sure?"
-      index:
-        post_a_job: "Post a job"
-        job_post_title: "Job Post Title"
-        category: "Category"
-        date: "Date"
-        title: "Job Posts"
-        search_by_title: "Search job by title"
-        search: "Search"
-        result: "results"
-      new:
-        title: "New Job Post"
-        post_a_new_job: "Post a new job: "
-        title2: "Title"
-        location: "Location"
-        salary_from: "Salary from"
-        salary_to: "Salary to"
-        note: "Note"
-        description: "Description"
-        requirement: "Requirement"
-        category_id: "Category"
-        unit_id: "Unit"
-        submit: "Submit"
-        your_job_notification: "Your Job Notification"
-        subcribe: "Subcribe"
-        your_email: "Your email"
-      edit:
-        title: "New Job Post"
-        post_a_new_job: "Post a new job: "
-        title2: "Title"
-        location: "Location"
-        salary_from: "Salary from"
-        salary_to: "Salary to"
-        note: "Note"
-        description: "Description"
-        requirement: "Requirement"
-        category_id: "Category"
-        unit_id: "Unit"
-        submit: "Submit"
-        your_job_notification: "Your Job Notification"
-        subcribe: "Subcribe"
-        your_email: "Your email"
-      show:
-        title: "Job Post Detail"
-        title2: "Title: "
-        per_month: "/ Month"
-        job_description: "Job Description"
-        job_requirement: "Job Requirement"
-        salary: "Salary"
-        category: "Category"
-        date_posted: "Date Posted"
-      create:
-        success: "Posted a job post"
-        error: "Post job post fail"
-      update:
-        success: "Update job post successful"
-        error: "Update job post fail"
-      destroy:
-        success: "Destroy job post successful"
-        error: "Destroy job post fail"
   date:
     formats:
       years: "%Y"
@@ -142,6 +79,7 @@ en:
         - "Saturday : 10:00 to 15:00"
         - "Sunday : Day Off (Holiday)"
   shared:
+    new_notification: "New notification"
     search_bar:
       job_keywords: "Job keywords..."
       category: "Category"
@@ -267,6 +205,7 @@ en:
       new:
         email: "Email"
         resend: "Resend unlock instructions"
+    
   profiles:
     educations:
       educations: "Educations"
@@ -374,5 +313,74 @@ en:
       index:
         title: "Recruiter"
         search: "Search"
+        result: "result"
       job_application:
         sure: "Are you sure?"
+    job_posts:
+      job_post:
+        sure: "Are you sure?"
+      index:
+        post_a_job: "Post a job"
+        job_post_title: "Job Post Title"
+        category: "Category"
+        date: "Date"
+        title: "Job Posts"
+        search_by_title: "Search job by title"
+        search: "Search"
+        result: "results"
+      new:
+        title: "New Job Post"
+        post_a_new_job: "Post a new job: "
+        title2: "Title"
+        location: "Location"
+        salary_from: "Salary from"
+        salary_to: "Salary to"
+        note: "Note"
+        description: "Description"
+        requirement: "Requirement"
+        category_id: "Category"
+        unit_id: "Unit"
+        submit: "Submit"
+        your_job_notification: "Your Job Notification"
+        subcribe: "Subcribe"
+        your_email: "Your email"
+      edit:
+        title: "New Job Post"
+        post_a_new_job: "Post a new job: "
+        title2: "Title"
+        location: "Location"
+        salary_from: "Salary from"
+        salary_to: "Salary to"
+        note: "Note"
+        description: "Description"
+        requirement: "Requirement"
+        category_id: "Category"
+        unit_id: "Unit"
+        submit: "Submit"
+        your_job_notification: "Your Job Notification"
+        subcribe: "Subcribe"
+        your_email: "Your email"
+      show:
+        title: "Job Post Detail"
+        title2: "Title: "
+        per_month: "/ Month"
+        job_description: "Job Description"
+        job_requirement: "Job Requirement"
+        salary: "Salary"
+        category: "Category"
+        date_posted: "Date Posted"
+      create:
+        success: "Posted a job post"
+        error: "Post job post fail"
+      update:
+        success: "Update job post successful"
+        error: "Update job post fail"
+      destroy:
+        success: "Destroy job post successful"
+        error: "Destroy job post fail"
+    notifications:
+      notification:
+        had_cancelled: "had cancelled"
+        had_apply: "had apply"
+      index:
+        title: "Notifications"

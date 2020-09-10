@@ -79,11 +79,11 @@ ActiveRecord::Schema.define(version: 2020_09_09_070017) do
   create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci", force: :cascade do |t|
     t.bigint "sender_id"
     t.bigint "receiver_id"
-    t.text "message"
-    t.bigint "job_post_id", null: false
+    t.integer "message"
+    t.bigint "job_application_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["job_post_id"], name: "index_notifications_on_job_post_id"
+    t.index ["job_application_id"], name: "index_notifications_on_job_application_id"
     t.index ["receiver_id"], name: "index_notifications_on_receiver_id"
     t.index ["sender_id"], name: "index_notifications_on_sender_id"
   end
@@ -158,7 +158,7 @@ ActiveRecord::Schema.define(version: 2020_09_09_070017) do
   add_foreign_key "job_posts", "categories"
   add_foreign_key "job_posts", "units"
   add_foreign_key "job_posts", "users"
-  add_foreign_key "notifications", "job_posts"
+  add_foreign_key "notifications", "job_applications"
   add_foreign_key "notifications", "users", column: "receiver_id"
   add_foreign_key "notifications", "users", column: "sender_id"
   add_foreign_key "profiles", "users"

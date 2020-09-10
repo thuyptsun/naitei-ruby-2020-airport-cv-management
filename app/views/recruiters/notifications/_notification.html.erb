@@ -1,0 +1,22 @@
+<tr>
+  <td class="mailbox-star">
+    <% if notification.cancelled? %>
+      <i class="fas fa-user-slash text-danger"></i>
+    <% elsif notification.reviewing? %>
+      <i class="far fa-address-card text-success"></i>
+    <% end %>
+  </td>
+  <td class="mailbox-name">
+    <%= link_to notification.sender.full_name, profile_path(notification.sender) %>
+  </td>
+  <td class="mailbox-subject">
+    <% if notification.cancelled? %>
+      <%= t ".had_cancelled" %>
+    <% elsif notification.reviewing? %>
+      <%= t ".had_apply" %>
+    <% end %>
+    <%= link_to notification.job_application.job_post.title, profile_path(notification.sender) %>
+  </td>
+  <td class="mailbox-attachment"></td>
+  <td class="mailbox-date"><%= time_ago_in_words notification.created_at %></td>
+</tr>

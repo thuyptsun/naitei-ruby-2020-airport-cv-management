@@ -49,69 +49,6 @@ vi:
       category: "Danh mục"
       date_posted: "Ngày đăng"
       apply: "Đăng kí việc này"
-  recruiters:
-    job_posts:
-      job_post:
-        sure: "Bạn có chắc không?"
-      index:
-        post_a_job: "Đăng bài tuyển người"
-        job_post_title: "Tiêu đề bài đăng"
-        category: "Danh mục"
-        date: "Ngày đăng"
-        title: "Bài đăng tuyển người"
-        search_by_title: "Tìm kiếm công việc"
-        search: "Tìm kiếm"
-        result: "kết quả"
-      new:
-        title: "Đăng tuyển tìm việc"
-        post_a_new_job: "Đăng tuyển tìm việc:"
-        title2: "Tiêu đề"
-        location: "Địa chỉ"
-        salary_from: "Lương khởi điểm"
-        salary_to: "Mức lương cao nhất"
-        note: "Ghi chú"
-        description: "Mô tả công việc"
-        requirement: "Yêu cầu"
-        category_id: "Danh mục"
-        unit_id: "Bộ phận"
-        submit: "Đăng công việc"
-        your_job_notification: "Thông báo về công việc của bạn"
-        subcribe: "Theo dõi"
-        your_email: "Địa chỉ email của bạn"
-      edit:
-        title: "Đăng tuyển tìm việc"
-        post_a_new_job: "Đăng tuyển tìm việc:"
-        title2: "Tiêu đề"
-        location: "Địa chỉ"
-        salary_from: "Lương khởi điểm"
-        salary_to: "Mức lương cao nhất"
-        note: "Ghi chú"
-        description: "Mô tả công việc"
-        requirement: "Yêu cầu"
-        category_id: "Danh mục"
-        unit_id: "Bộ phận"
-        submit: "Đăng công việc"
-        your_job_notification: "Thông báo về công việc của bạn"
-        subcribe: "Theo dõi"
-        your_email: "Địa chỉ email của bạn"
-      show:
-        title: "Chi tiết bài đăng"
-        title2: "Tiêu đề: "
-        per_month: "/ Tháng"
-        job_description: "Mô tả công việc"
-        job_requirement: "Yêu cầu đối với công việc"
-        salary: "Lương"
-        category: "Danh mục"
-        date_posted: "Ngày đăng"
-      create:
-        success: "Đăng thành công bài tuyển người"
-        error: "Đăng tuyển thất bại"
-      update:
-        success: "Cập nhật thành công"
-        error: "Cập nhật thất bại"
-      destroy:
-        success: "Xóa thành công"
-        error: "Xóa thất bại"
   date:
     formats:
       years: "%Y"
@@ -142,6 +79,7 @@ vi:
         - "T7 : 10:00 ~ 15:00"
         - "CN : Nghỉ"
   shared:
+    new_notification: "Có thông báo mới"
     search_bar:
       job_keywords: "Từ khóa..."
       category: "Danh mục"
@@ -374,5 +312,80 @@ vi:
       index:
         title: "Recruiter"
         search: "Search"
+        result: "kết quả"
       job_application:
         sure: "Bạn có chắc muốn thay đổi?"
+    job_posts:
+      job_post:
+        sure: "Bạn có chắc không?"
+      index:
+        post_a_job: "Đăng bài tuyển người"
+        job_post_title: "Tiêu đề bài đăng"
+        category: "Danh mục"
+        date: "Ngày đăng"
+        title: "Bài đăng tuyển người"
+        search_by_title: "Tìm kiếm công việc"
+        search: "Tìm kiếm"
+        result: "kết quả"
+      new:
+        title: "Đăng tuyển tìm việc"
+        post_a_new_job: "Đăng tuyển tìm việc:"
+        title2: "Tiêu đề"
+        location: "Địa chỉ"
+        salary_from: "Lương khởi điểm"
+        salary_to: "Mức lương cao nhất"
+        note: "Ghi chú"
+        description: "Mô tả công việc"
+        requirement: "Yêu cầu"
+        category_id: "Danh mục"
+        unit_id: "Bộ phận"
+        submit: "Đăng công việc"
+        your_job_notification: "Thông báo về công việc của bạn"
+        subcribe: "Theo dõi"
+        your_email: "Địa chỉ email của bạn"
+      edit:
+        title: "Đăng tuyển tìm việc"
+        post_a_new_job: "Đăng tuyển tìm việc:"
+        title2: "Tiêu đề"
+        location: "Địa chỉ"
+        salary_from: "Lương khởi điểm"
+        salary_to: "Mức lương cao nhất"
+        note: "Ghi chú"
+        description: "Mô tả công việc"
+        requirement: "Yêu cầu"
+        category_id: "Danh mục"
+        unit_id: "Bộ phận"
+        submit: "Đăng công việc"
+        your_job_notification: "Thông báo về công việc của bạn"
+        subcribe: "Theo dõi"
+        your_email: "Địa chỉ email của bạn"
+      show:
+        title: "Chi tiết bài đăng"
+        title2: "Tiêu đề: "
+        per_month: "/ Tháng"
+        job_description: "Mô tả công việc"
+        job_requirement: "Yêu cầu đối với công việc"
+        salary: "Lương"
+        category: "Danh mục"
+        date_posted: "Ngày đăng"
+      create:
+        success: "Đăng thành công bài tuyển người"
+        error: "Đăng tuyển thất bại"
+      update:
+        success: "Cập nhật thành công"
+        error: "Cập nhật thất bại"
+      destroy:
+        success: "Xóa thành công"
+        error: "Xóa thất bại"
+    notifications:
+      notification:
+        had_cancelled: "đã hủy"
+        had_apply: "đã đăng ký"
+      index:
+        title: "Thông báo"
+  notifications:
+      notification:
+        had_cancelled: "đã hủy"
+        had_apply: "đã đăng ký"
+      index:
+        title: "Thông báo"
